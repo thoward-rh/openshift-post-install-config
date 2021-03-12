@@ -1,0 +1,8 @@
+#Edit
+
+oc edit configs.imageregistry.operator.openshift.io
+
+#add this spec
+storage:
+  pvc:
+    claim: 
