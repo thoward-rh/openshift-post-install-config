@@ -1,10 +1,9 @@
-After creating the nodes, don't forget to scale the nodes to 0 and then back up to desired amount
-
-oc scale --replicas=0 MachineSet <machine-set-name> -n openshift-machine-api
-
-oc scale --replicas=1 MachineSet <machine-set-name> -n openshift-machine-api
+After creating the nodes, don't forget to scale the nodes to 0 and then back up to
 
 # Scheduler Configuration
+
+#Check this article:
+https://access.redhat.com/solutions/5034771
 
 The configuration in this directory designates three worker nodes as infra nodes. It is based on the advice:
 
