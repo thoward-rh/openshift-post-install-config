@@ -17,6 +17,13 @@ spec:
     elasticsearch:
       nodeSelector:
           node-role.kubernetes.io/infra: ''
+      tolerations:
+      - key: infra
+        value: reserved
+        effect: NoSchedule
+      - key: infra
+        value: reserved
+        effect: NoExecute
       nodeCount: 3 
       storage:
         storageClassName: thin 
@@ -37,12 +44,26 @@ spec:
       replicas: 1
       nodeSelector: 
           node-role.kubernetes.io/infra: ''
+      tolerations:
+      - key: infra
+        value: reserved
+        effect: NoSchedule
+      - key: infra
+        value: reserved
+        effect: NoExecute
   curation:
     type: "curator"
     curator:
       schedule: "30 3 * * *" 
       nodeSelector: 
           node-role.kubernetes.io/infra: ''
+      tolerations:
+      - key: infra
+        value: reserved
+        effect: NoSchedule
+      - key: infra
+        value: reserved
+        effect: NoExecute
   collection:
     logs:
       type: "fluentd"  
