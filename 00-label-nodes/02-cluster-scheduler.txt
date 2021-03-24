@@ -1,0 +1,6 @@
+
+oc edit Scheduler/cluster
+
+#Add the following spec
+spec:
+  defaultNodeSelector: node-role.kubernetes.io/app=
