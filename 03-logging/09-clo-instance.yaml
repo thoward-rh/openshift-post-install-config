@@ -17,6 +17,7 @@ spec:
     elasticsearch:
       nodeSelector:
           node-role.kubernetes.io/infra: ''
+          node-role.kubernetes.io/logging: ''
       tolerations:
       - key: infra
         value: reserved
@@ -44,6 +45,7 @@ spec:
       replicas: 1
       nodeSelector: 
           node-role.kubernetes.io/infra: ''
+          node-role.kubernetes.io/logging: ''
       tolerations:
       - key: infra
         value: reserved
@@ -57,6 +59,7 @@ spec:
       schedule: "30 3 * * *" 
       nodeSelector: 
           node-role.kubernetes.io/infra: ''
+          node-role.kubernetes.io/logging: ''
       tolerations:
       - key: infra
         value: reserved
